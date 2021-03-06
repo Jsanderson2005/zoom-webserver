@@ -1,0 +1,106 @@
+<!Doctype html>
+<html>
+<style>
+</style>
+
+<body>
+    <h1>Zoom Control</h1>
+    <form method="get" action="/join">
+        <input type="text" id="link" name="link" placeholder="Enter a Zoom link.">
+        <input type="submit" value="Submit">
+    </form>
+    <button id="mute-btn">Mute/UnMute</button>
+    <button id="video-btn">Turn on/off video</button>
+    <button id="view-btn">Switch Views</button>
+    <button id="full-btn">Fullscreen</button>
+    <button id="chat-btn">Turn on/off chat</button>
+    <button id="end-btn">End Zoom</button>
+    <script>
+        const Mutebutton = document.getElementById('mute-btn');
+        Mutebutton.addEventListener('click', async _ => {
+            try {
+                const response = await fetch('/mute', {
+                    method: 'post',
+                    body: {
+                        // Your body
+                    }
+                });
+                console.log('Completed!', response);
+            } catch (err) {
+                console.error(`Error: ${err}`);
+            }
+        });
+        const Videobutton = document.getElementById('video-btn');
+        Videobutton.addEventListener('click', async _ => {
+            try {
+                const response = await fetch('/video', {
+                    method: 'post',
+                    body: {
+                        // Your body
+                    }
+                });
+                console.log('Completed!', response);
+            } catch (err) {
+                console.error(`Error: ${err}`);
+            }
+        });
+        const Viewbutton = document.getElementById('view-btn');
+        Viewbutton.addEventListener('click', async _ => {
+            try {
+                const response = await fetch('/view', {
+                    method: 'post',
+                    body: {
+                        // Your body
+                    }
+                });
+                console.log('Completed!', response);
+            } catch (err) {
+                console.error(`Error: ${err}`);
+            }
+        });
+        const Fullbutton = document.getElementById('full-btn');
+        Fullbutton.addEventListener('click', async _ => {
+            try {
+                const response = await fetch('/fullscreen', {
+                    method: 'post',
+                    body: {
+                        // Your body
+                    }
+                });
+                console.log('Completed!', response);
+            } catch (err) {
+                console.error(`Error: ${err}`);
+            }
+        });
+        const Chatbutton = document.getElementById('chat-btn');
+        Chatbutton.addEventListener('click', async _ => {
+            try {
+                const response = await fetch('/meetingChat', {
+                    method: 'post',
+                    body: {
+                        // Your body
+                    }
+                });
+                console.log('Completed!', response);
+            } catch (err) {
+                console.error(`Error: ${err}`);
+            }
+        });
+        const Endbutton = document.getElementById('end-btn');
+        Endbutton.addEventListener('click', async _ => {
+            try {
+                const response = await fetch('/end', {
+                    method: 'post',
+                    body: {
+                        // Your body
+                    }
+                });
+                console.log('Completed!', response);
+            } catch (err) {
+                console.error(`Error: ${err}`);
+            }
+        });
+    </script>
+</body>
+
+</html>
